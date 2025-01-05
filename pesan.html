@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoop Spyrus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Scoop Spyrus" /></a>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="visi.html">Kenali Tim Kami</a>
+                <ul class="dropdown">
+                    <li><a href="visi.html">Visi Kami ke Depan</a></li>
+                    <li><a href="inovasi.html">Inovasi yang Kami Bangun</a></li>
+                    <li><a href="sambutan.html">Pesan dari Tim Kami</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="menarik.html">Kabar Terkini</a>
+                <!-- <ul class="dropdown">
+                            <li><a href="pengumuman.html">Pengumuman Penting</a></li>
+                            <li><a href="menarik.html">Hal Menarik untuk Anda</a></li>
+                        </ul> -->
+            </li>
+            <li>
+                <a href="membantu.html">Perlu Bantuan</a>
+                <ul class="dropdown">
+                    <li><a href="membantu.html">Kami Siap Membantu</a></li>
+                    <!-- <li><a href="pertanyaan.html">Pertanyaan Anda Terjawab</a></li> -->
+                    <li><a href="masukan.html">Berikan Masukan Anda</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="menu.html" style="color: #6886c5;">Pesan Sekarang</a>
+                <ul class="dropdown">
+                    <li><a href="menu.html">Lihat Menu Kami</a></li>
+                    <li><a href="pesan.html">Mulai Pesanan</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="login-wrapper">
+            <a href="login.html">Masuk</a>
+            <!-- <a href="#">Masuk</a> <span style="color: #000000;">|</span> <a href="#">Daftar</a> -->
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="text-center">
+            <h1 class="mb-4">Menu Pesanan Kami</h1>
+            <p class="lead">Pilih hidangan favorit Anda dan pesan sekarang!</p>
+        </div>
+        <div class="row mt-5">
+            <!-- Daftar Menu -->
+            <div class="col-md-6">
+                <h3 class="mb-3">Pilihan Menu</h3>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="images/CK_tip243t001231.jpg" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Samyang Omlette</h5>
+                                <p class="card-text">Omelet isi mie pedas, keju, dan sosis. Dijamin bikin nagih!</p>
+                                <p class="card-text"><strong>Rp 25.000</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="images/CK_tc04650000031.jpg" class="img-fluid rounded-start"
+                                alt="Onigiri Gochujang">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Onigiri Gochujang</h5>
+                                <p class="card-text">Nasi berbumbu gochujang dengan isian ayam atau keju mozzarella.</p>
+                                <p class="card-text"><strong>Rp 20.000</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Form Pemesanan -->
+            <div class="col-md-6">
+                <h3 class="mb-3">Form Pemesanan</h3>
+                <div class="p-4 border rounded" style="background-color: #f8f9fa;">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="menu" class="form-label">Pilih Menu</label>
+                            <select class="form-select" id="menu" required>
+                                <option value="">Pilih Menu</option>
+                                <option value="Samyang Omlette">Samyang Omlette</option>
+                                <option value="Onigiri Gochujang">Onigiri Gochujang</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="jumlah" class="form-label">Jumlah</label>
+                            <input type="number" class="form-control" id="jumlah" min="1" placeholder="Jumlah Pesanan"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pesan" class="form-label">Pesan Tambahan</label>
+                            <textarea class="form-control" id="pesan" rows="3"
+                                placeholder="Tuliskan pesan tambahan"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Pesan Sekarang</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>Nomor Bisnis: 123-456-789</p>
+                    <p>Telepon: +62 812-3456-7890</p>
+                    <p>Faks: +62 21-87654321</p>
+                    <p>Email: scoopspyrus@gmail.com</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Cerita Kami</a>
+                    <a href="#">Privasi Anda, Prioritas Kami</a>
+                    <a href="#">Ketentuan Layanan</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Aegi Kitchen Logo" class="img-fluid">
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Scoop Spyrus. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</html>

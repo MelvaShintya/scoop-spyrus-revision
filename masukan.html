@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoop Spyrus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Scoop Spyrus" /></a>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="visi.html">Kenali Tim Kami</a>
+                <ul class="dropdown">
+                    <li><a href="visi.html">Visi Kami ke Depan</a></li>
+                    <li><a href="inovasi.html">Inovasi yang Kami Bangun</a></li>
+                    <li><a href="sambutan.html">Pesan dari Tim Kami</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="menarik.html">Kabar Terkini</a>
+                <!-- <ul class="dropdown">
+                            <li><a href="pengumuman.html">Pengumuman Penting</a></li>
+                            <li><a href="menarik.html">Hal Menarik untuk Anda</a></li>
+                        </ul> -->
+            </li>
+            <li>
+                <a href="membantu.html" style="color: #6886c5;">Perlu Bantuan</a>
+                <ul class="dropdown">
+                    <li><a href="membantu.html">Kami Siap Membantu</a></li>
+                    <!-- <li><a href="pertanyaan.html">Pertanyaan Anda Terjawab</a></li> -->
+                    <li><a href="masukan.html">Berikan Masukan Anda</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="menu.html">Pesan Sekarang</a>
+                <ul class="dropdown">
+                    <li><a href="menu.html">Lihat Menu Kami</a></li>
+                    <li><a href="pesan.html">Mulai Pesanan</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="login-wrapper">
+            <a href="login.html">Masuk</a>
+            <!-- <a href="#">Masuk</a> <span style="color: #000000;">|</span> <a href="#">Daftar</a> -->
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="text-center">
+            <h1 class="mb-4">Berikan Masukan Anda</h1>
+            <!-- <p class="lead">Kami ingin mendengar pendapat Anda! Berikan rating dan komentar untuk membantu kami
+                meningkatkan
+                layanan kami.</p> -->
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- <h3 class="mb-4 text-center">Form Berikan Masukan</h3> -->
+                <form>
+                    <div class="mb-3">
+                        <label for="rating" class="form-label">Rating (Bintang)</label>
+                        <div class="d-flex justify-content-start">
+                            <span class="fa fa-star" data-value="1"></span>
+                            <span class="fa fa-star" data-value="2"></span>
+                            <span class="fa fa-star" data-value="3"></span>
+                            <span class="fa fa-star" data-value="4"></span>
+                            <span class="fa fa-star" data-value="5"></span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="0">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">Komentar</label>
+                        <textarea class="form-control" id="comment" rows="4" placeholder="Tulis komentar Anda di sini"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Kirim Masukan</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- List dan Filter Rating -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <h3 class="mb-4 text-center">Masukan Pelanggan</h3>
+
+                <!-- Filter Rating -->
+                <div class="d-flex justify-content-end mb-3">
+                    <label for="filterRating" class="form-label me-2">Filter Berdasarkan Rating:</label>
+                    <select id="filterRating" class="form-select w-25">
+                        <option value="0">Semua Rating</option>
+                        <option value="1">1 Bintang</option>
+                        <option value="2">2 Bintang</option>
+                        <option value="3">3 Bintang</option>
+                        <option value="4">4 Bintang</option>
+                        <option value="5">5 Bintang</option>
+                    </select>
+                </div>
+
+                <!-- Daftar Masukan -->
+                <div id="reviewsList">
+                    <!-- Masukan Pelanggan akan muncul di sini -->
+                    <div class="card mb-3" data-rating="5">
+                        <div class="card-body">
+                            <h5 class="card-title">Pelanggan A</h5>
+                            <p class="card-text">★★★★★</p>
+                            <p class="card-text">Produk sangat bagus! Sangat puas dengan kualitas dan pelayanan yang
+                                diberikan. Akan kembali lagi!</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" data-rating="4">
+                        <div class="card-body">
+                            <h5 class="card-title">Pelanggan B</h5>
+                            <p class="card-text">★★★★☆</p>
+                            <p class="card-text">Rasa makanannya enak, namun pengemasannya bisa lebih baik. Overall
+                                sangat
+                                memuaskan.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" data-rating="3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pelanggan C</h5>
+                            <p class="card-text">★★★☆☆</p>
+                            <p class="card-text">Cukup baik, tetapi masih ada beberapa hal yang perlu diperbaiki.
+                                Layanan
+                                sedikit lambat.</p>
+                        </div>
+                    </div>
+                    <!-- Tambahkan lebih banyak masukan pelanggan di sini -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.fa-star');
+        let ratingInput = document.getElementById('rating');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                let value = star.getAttribute('data-value');
+                ratingInput.value = value;
+
+                stars.forEach(s => {
+                    if (s.getAttribute('data-value') <= value) {
+                        s.classList.add('text-warning');
+                    } else {
+                        s.classList.remove('text-warning');
+                    }
+                });
+            });
+        });
+
+        const filterRating = document.getElementById('filterRating');
+        const reviewsList = document.getElementById('reviewsList');
+
+        filterRating.addEventListener('change', () => {
+            let selectedRating = filterRating.value;
+            let reviews = reviewsList.querySelectorAll('.card');
+
+            reviews.forEach(review => {
+                let reviewRating = review.getAttribute('data-rating');
+                if (selectedRating == '0' || selectedRating == reviewRating) {
+                    review.style.display = 'block';
+                } else {
+                    review.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>Nomor Bisnis: 123-456-789</p>
+                    <p>Telepon: +62 812-3456-7890</p>
+                    <p>Faks: +62 21-87654321</p>
+                    <p>Email: scoopspyrus@gmail.com</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Cerita Kami</a>
+                    <a href="#">Privasi Anda, Prioritas Kami</a>
+                    <a href="#">Ketentuan Layanan</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Aegi Kitchen Logo" class="img-fluid">
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Scoop Spyrus. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</html>
