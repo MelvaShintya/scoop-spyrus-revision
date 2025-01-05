@@ -1,0 +1,1 @@
+# scoop-spyrus-revision
